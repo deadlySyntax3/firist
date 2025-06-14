@@ -8,20 +8,8 @@
 <html> <!--start withe--> 
 <head><!--information about the page-->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title> ONE OF MY FAVS</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audiojs.min.css" />
-<style>
-   .audiojs {
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  .audiojs .play-pause {
-    height: 15px !important;
-  }
-  .audiojs .scrubber {
-    height: 20px !important;
-  }
+<title> ONE OF MY FAVORITE </title>
+   <style>
 body {
 background-color:#000; /* خلفية غامقة عشان يوضح اللون الأبيض */
 color:#fff; /* يغيّر لون كل النصوص إلى أبيض */
@@ -128,22 +116,20 @@ They are known for blending heavy metal with elements of alternative rock, shoeg
   <li>Chino Moreno’s voice ranges from soft whispering to intense screaming, making their music cinematic and surreal</li>
 </ol><!--close ol-->
 <!--**nest list both of them ul/ol-->
-<h2>one of my favs albums</h2>
+<h2>One of My Favorite Album</h2>
 <!--b and strong for bold text -->
 <h3> <b>Diamond Eyes (2010)</b> </h3>
 <!-- {img src="url"}  img for images src==sorce-->
 <!--alt يوصف محتوى صوره اذا م اشتغلت-->
 <img src="deftones1.jpg" alt="Diamond Eyes Album Cover" width="400" height="300" >
 <h3> <strong>song-risk(official visualizer)</strong></h3>
-<video src="document_5940681004413884308.mp4" controls width="400" height="300"></video>
+<video src="document_5940681004413884308.mp4" controls width="400" height="300" type="video/mp4" ></video>
 <h3><b>Deftones Interview 1997</b></h3>
-<audio src="interviewd.m4a" preload="auto" controls></audio><br>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
-<script>
-  audiojs.events.ready(function() {
-    var as = audiojs.createAll();
-  });
-</script>
+<audio controls
+       style="width: 100%; max-width: 400px; display: block; margin: 20px auto; background-color: #000; border: 1px solid white; border-radius: 8px;">
+  <source src="interviewd.m4a" type="audio/mp4">
+  Your browser does not support the audio element.
+</audio>
 <!--If you do
 not need a border, then you can use border = "0“. It is
 important to see the boundaries of the table,**but Not
