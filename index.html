@@ -7,13 +7,77 @@
    It must only appear once, at the top of the page (before any HTML tags) -->
 <html> <!--start withe--> 
 <head> <!--information about the page-->
-<title> one of my favs</title>
+<meta charset="UTF-8">
+<title> ONE OF MY FAVS</title>
 <style>
 body {
-background-color: black; /* خلفية غامقة عشان يوضح اللون الأبيض */
-color: white; /* يغيّر لون كل النصوص إلى أبيض */
+background-color:#000; /* خلفية غامقة عشان يوضح اللون الأبيض */
+color:#fff; /* يغيّر لون كل النصوص إلى أبيض */
 font-family: Arial, sans-serif; /* تحسين شكل الخط */
+padding: 30px;/*حدود بين صفحه ومحتوى*/
+text-align: center;
  }
+.band-list, .style-list {
+max-width: 700px;
+margin: 20px auto;
+padding-left: 20px;
+line-height: 1.8;
+font-size: 16px;
+text-align: left;
+ color: white;
+}
+.band-list li::marker {
+color: red;
+}
+.style-list li::marker {
+  color:red;
+}
+table {
+width: 100%; /*يكون بعرض الشاشه*/
+border-collapse: collapse;/*حذف الفراغات*/
+margin-top: 20px; /*مسافه فوق الجدول*/
+}
+th, td {
+border: 1px solid white;/*كل خليه لها حدود بيضاء*/
+padding: 10px;/*مسافه داخليه*/
+}
+th {
+background-color: #111;/*الراس يكون بلون افتح تقريبا من الاسود*/
+}
+tr:nth-child(even) {
+background-color: #1a1a1a;/*صفوف زوجيه بلون*/
+}
+a {
+color: red;/*لون رابط احمر*/
+text-decoration: none;
+font-weight: bold;
+}
+a:hover {
+  color: #ff8080;/*وقت الضغط عليه يفتح*/
+}
+textarea {
+background-color: #000;
+color: white;
+border: 1px solid white;
+padding: 10px;
+margin-top: 10px;
+width: 80%;
+max-width: 500px;
+}
+input[type="submit"] {
+background-color: black;
+color: red;
+border: 1px solid rgb(0, 0, 0);
+padding: 10px 20px;
+margin-top: 10px;
+cursor: pointer;
+}
+iframe {
+margin-top: 20px;
+border: 1px solid white;
+}
+h2 {
+margin-top: 40px;}
 </style>
 </head>
 <body>
@@ -33,24 +97,23 @@ font-family: Arial, sans-serif; /* تحسين شكل الخط */
 They are known for blending heavy metal with elements of alternative rock, shoegaze, dream pop, and post-rock, creating a unique and atmospheric
 </p>
 <h1>Band Members</h1>
-<!--lists-->
-<!--ordered list-->
-<ul><!--start ul-->
-<li>Chino Moreno Vocals, sometimes guitar</li><!--closr and start li-->
-<li>Stephen Carpenter Guitars</li><!--closr and start li-->
-<li>Abe Cunningham Drums</li><!--closr and start li-->
-<li>Frank Delgado Samples, keyboards, turntables</li><!--closr and start li-->
-<li> Cheng  Former bassist (passed away in 2013)</li><!--closr and start li-->
-<li> Vega later replaced Chi on bass and later left</li><!--closr and start li-->
-</ul><!--colse ul-->
-<h2>Musical Style</h2> 
-<!--unordered list-->
-<ol><!--start ol-->
- <li>Deftones music stands out because its</li> <!--closr and start li-->
- <li>Heavy but emotional</li><!--closr and start li-->
- <li>Dreamy but aggressive</li><!--closr and start li-->
- <li>Poetic but raw</li><!--closr and start li-->
- <li>Chino Morenos voice can go from soft whispering to intense screaming, and their music often feels cinematic or surreal</li><!--closr and start li-->
+<!-- Unordered list (قائمة غير مرتبة) -->
+<ul class="band-list">
+  <li>Chino Moreno – Vocals, sometimes guitar</li>
+  <li>Stephen Carpenter – Guitars</li>
+  <li>Abe Cunningham – Drums</li>
+  <li>Frank Delgado – Samples, keyboards, turntables</li>
+  <li>Chi Cheng – Former bassist (passed away in 2013)</li>
+  <li>Sergio Vega – Replaced Chi, later left</li>
+</ul>
+<h2>Musical Style</h2>
+<!-- Ordered list (قائمة مرتبة) -->
+<ol class="style-list">
+  <li>Deftones' music stands out because it's unique</li>
+  <li>Heavy but emotional</li>
+  <li>Dreamy but aggressive</li>
+  <li>Poetic but raw</li>
+  <li>Chino Moreno’s voice ranges from soft whispering to intense screaming, making their music cinematic and surreal</li>
 </ol><!--close ol-->
 <!--**nest list both of them ul/ol-->
 <h2>one of my favs albums</h2>
@@ -67,6 +130,7 @@ They are known for blending heavy metal with elements of alternative rock, shoeg
 not need a border, then you can use border = "0“. It is
 important to see the boundaries of the table,**but Not
 supported in HTML 5.-->
+<h1>Deftones Albums</h1>
 <table border="1" cellpadding="10" cellspacing="0">
 <thead><!--Table head-->
 <tr><!--Table Row-->
@@ -144,13 +208,13 @@ supported in HTML 5.-->
 </tbody><!--Close Table Body-->
 </table><!--Close Table-->
 <p>
-<a href="https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH" target="_blank" style="color: red;">
+<a href="https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH" target="_blank">
 <!--target="_blank" يُستخدم داخل وسم <a> لفتح الرابط في تبويب جديد (New Tab) بدل ما يفتح في نفس الصفحة-->
 Listen on Spotify</a></p>
 <h2>Share your thoughts or favorite Deftones song</h2>
 <form action="submit.php" method="post">
-<textarea id="message" name="message" rows="5" cols="50" placeholder="Your opinion or favorite song..."Style=background-color:black;></textarea><br>
-<input type="submit" value="Send" style="background-color: black; color: white;" >
+<textarea id="message" name="message" rows="5" cols="50" placeholder="Your opinion or favorite song..."></textarea><br>
+<input type="submit" value="Send" >
 </form>
 <h2>Deftones Wikipedia Page</h2>
 <!--page in my page-->
@@ -158,8 +222,7 @@ Listen on Spotify</a></p>
 src="https://en.wikipedia.org/wiki/Deftones" 
 width="400px" 
 height="400px" 
-title="Deftones on Wikipedia" 
-style="border:1px solid white;">
+title="Deftones on Wikipedia">
 </iframe>
 </body>  <!--in the end use / to close it -->
 </html>  <!--in the end use / to close it -->
