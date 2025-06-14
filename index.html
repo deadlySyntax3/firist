@@ -7,11 +7,22 @@
    It must only appear once, at the top of the page (before any HTML tags) -->
 <html> <!--start withe--> 
 <head><!--information about the page-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audiojs.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title> ONE OF MY FAVS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audiojs.min.css" />
 <style>
+   .audiojs {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .audiojs .play-pause {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .audiojs .scrubber {
+    height: 20px !important;
+  }
 body {
 background-color:#000; /* خلفية غامقة عشان يوضح اللون الأبيض */
 color:#fff; /* يغيّر لون كل النصوص إلى أبيض */
@@ -27,11 +38,6 @@ line-height: 1.8;
 font-size: 16px;
 text-align: left;
  color: white;
-}
-audio {
-  width: 100%;
-  max-width: 400px;
-  height: 60px; /* زيادة الارتفاع عشان الأيقونات تبان أكبر */
 }
 .band-list li::marker {
 color: red;
@@ -133,10 +139,11 @@ They are known for blending heavy metal with elements of alternative rock, shoeg
 <video src="document_5940681004413884308.mp4" controls width="400" height="300"></video>
 <h3><b>Deftones Interview 1997</b></h3>
 <audio src="interviewd.m4a" preload="auto" controls></audio><br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
 <script>
-audiojs.events.ready(function() {
-var as = audiojs.createAll();
-});
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
 </script>
 <!--If you do
 not need a border, then you can use border = "0“. It is
