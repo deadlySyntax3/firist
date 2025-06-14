@@ -6,7 +6,9 @@
    <!--**(DOCTYPE) this page is written in HTML5 display it using the latest rendering standards 
    It must only appear once, at the top of the page (before any HTML tags) -->
 <html> <!--start withe--> 
-<head> <!--information about the page-->
+<head><!--information about the page-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audiojs.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
 <meta charset="UTF-8">
 <title> ONE OF MY FAVS</title>
 <style>
@@ -26,11 +28,6 @@ font-size: 16px;
 text-align: left;
  color: white;
 }
-audio{
-width:300px;
-max-width:400px;
-height:40px;
-}  
 .band-list li::marker {
 color: red;
 }
@@ -130,7 +127,12 @@ They are known for blending heavy metal with elements of alternative rock, shoeg
 <h3> <strong>song-risk(official visualizer)</strong></h3>
 <video src="document_5940681004413884308.mp4" controls width="400" height="300"></video>
 <h3><b>Deftones Interview 1997</b></h3>
-<audio src="interviewd.m4a" controls></audio><br>
+<audio src="interviewd.m4a" preload="auto" controls></audio><br>
+<script>
+audiojs.events.ready(function() {
+var as = audiojs.createAll();
+});
+</script>
 <!--If you do
 not need a border, then you can use border = "0“. It is
 important to see the boundaries of the table,**but Not
